@@ -1,0 +1,20 @@
+# Paper Survey Agent - runtime dependencies
+# Target interpreter: Python 3.14
+#
+# 実コードの import を精査し、論文サーベイに必要なものだけに絞った。
+# langgraph / langchain(meta) / tavily / streamlit は未使用のため含めない。
+# バージョンは実APIでの動作確認が取れた版に合わせて固定する。
+
+# データ検証（v2 専用 API を使用）
+pydantic>=2.7,<3.0
+
+# HTTP（arXiv / Semantic Scholar への検索）
+requests>=2.31,<3.0
+
+# LLM 連携（Gemini）。build_gemini_dependencies 内で遅延 import される。
+# 本番実行時のみ必要（テストはモックのため不要）。
+langchain-core>=1.4,<2.0
+langchain-google-genai>=4.2,<5.0
+
+# .env 読み込み（実行スクリプトで GOOGLE_API_KEY 等を読む用途）
+python-dotenv>=1.0,<2.0

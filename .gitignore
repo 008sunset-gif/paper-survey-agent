@@ -1,0 +1,23 @@
+# Environment variables (NEVER commit this!)
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+*.log
+data/
+output/
+chroma_db/

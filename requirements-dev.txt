@@ -1,0 +1,4 @@
+# 開発・テスト用の追加依存（本番 requirements.txt とは分離）
+# 実APIを叩かずにモックテストするためのもの。
+-r requirements.txt
+pytest>=8.0
